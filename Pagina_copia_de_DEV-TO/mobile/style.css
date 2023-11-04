@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+:root {
+    --font-open-sans: "Open Sans", sans-serif;
+    --radius_1: 5px;
+    --radius: 0.4rem;
+    --bg-gray: #404040;
+    --color-gray-suave:#c6b9b9;
+    --color-white: #ffffff;
+    --color-black: black;
+    --color-beisge:  #eeecdd;
+    --color-botons:  #3c74da;
+    --primary:#3a238e;
+    --color-hover: #7f6dc1;
+    --color-transparent: transparent;
+    --size-0-02: 0.2rem;
+    --size-0-75: 0.75rem;
+    --size-1: 1rem;
+    --size_1-3: 1.3rem;
+    --size-1-5: 1.5rem;
+    --size-2: 2rem;
+    --px-10: 10px;
+}
+
+body{
+    height: auto;
+    font-family: var(--font-open-sans);
+    background: var(--color-beisge);
+}
+.Header{
+    margin-bottom: var(--size-1);
+    width: 100%;
+    background: var(--color-white);
+}
+.Header__Box{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.Header__Nav-icon{
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+.Header__Hamburguer{
+    margin: var(--px-10);
+}
+.Header__Icon{
+    height: 35px;    
+    width: 40px;
+    border-radius: var(--radius);
+}
+.Header__Search, .Header__Navbar--edit, .Header__Login{
+    display: none;
+}
+.Header__Box--edit{
+    display: flex;
+    align-items: center;
+}
+.mg-1{
+    margin-right: var(--px-10);
+}
+.Header__Register{
+    color: var(--primary);
+    display: flex ;
+    align-items: center;
+    justify-content: center;
+    padding: var(--px-10);
+    border: 1px solid var(--primary);
+    border-radius: var(--radius);
+    text-decoration: none;
+    font-weight: bold;
+    height: 40px;
+}
+.Header__Register:hover{
+    background: var(--primary);
+    color: var(--color-beisge);
+}
+.Header__Button--edit{
+    background-color: var(--color-transparent);
+    color: var(--bg-gray);
+    border: 0;
+    font-size: var(--size-1);
+}
+.Header__Login, .Header__Navbar, .Header__Search, aside, footer{
+    display: none;
+}
+
+.Box{
+    display: grid;
+    grid-template-columns:1fr;
+}
+
+.mg-1{
+    margin-right: var(--size-0-75);
+}
+.Card-main{
+    background-color: var(--color-white);
+    border-radius: var(--radius);
+    margin: var(--size-0-75);
+}
+.Card-main__box{
+    display: flex;
+    align-items:center;
+    margin-bottom: var(--size-1);
+}
+.mg-2{
+    padding: var(--size-0-75);
+    border-radius: var(--radius);
+}
+.mg-2:hover{
+    background-color: var(--bg-white);
+    color: var(--color-hover);
+}
+.Card-main__box--edit{
+    padding: var(--size-0-75);
+    padding-top: var(--size-02);
+}
+.Card-main__Title{
+    margin-bottom: var(--size-05);
+}
+.Card-main__Text{
+    margin-bottom: var(--size-1);
+}
+.Card-main__Link{
+    margin-right: var(--size-05);
+    padding: var(--size-05);
+    text-decoration:none;
+}
+span{
+    color: var(--color-black);
+}
+.Card-main__Link:hover{
+    background-color: var(--color-beisge);
+    border-radius: var(--radius);
+}
+@media(min-width:750px){
+    body{
+        /* background-color: red; */
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .Box{
+        display: grid;
+        grid-template-columns:1fr 2fr;
+        gap: 10px;
+        width: 98%;
+    }
+    aside{
+        display: block;
+    }
+    .Card-aside{
+        background: var(--color-white);
+        border-radius: var(--radius);
+        padding: var(--size-0-75);
+    }
+    .Card-aside__Title{
+        font-size: var(--size-1);
+        margin-bottom: var(--size-0-75);
+        margin-top: var(--size-05);
+    }
+    .Card-aside__Text{
+        font-size: var(--size-09);
+        color: var(--color-gray);
+    }
+    .Card-aside__Box{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-top: var(--size-1);
+        margin-bottom: var(--size-1);
+    }
+    .Card-aside__Link{
+        width: 100%;
+        text-align: center;
+        margin: var(--size-0-75);
+        margin-bottom: 0;
+    }
+    .Card-aside__Nav{
+        display: flex;
+        flex-direction: column;
+        margin-top: var(--size-1);
+    }
+    .Card-aside__Navigation{
+        padding: var(--size-05);
+        border-radius: var(--radius);
+        text-decoration: none;
+        color: var(--color-black);
+    }
+    .Card-aside__Navigation:hover{
+        background: var(--color-hover);
+    }
+    footer{
+        display: none;
+    }
+}
+@media(min-width:1030px){
+    .Box, .Header__Box{
+        width: 95%;
+    }
+    .Box{
+        display: grid;
+        grid-template-columns: 240px 2fr 1fr;
+        gap: 10px;
+    }
+    aside, footer{
+        display: block;
+    }
+    .Card-footer{
+        margin: var(--size-1);
+        background-color: var(--color-white);
+        border-radius: var(--radius);
+    }
+    
+    .Card-footer__Box{
+        height: 100px;
+        padding: var(--size-0-75);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        border-top: var(--color-gray-suave)  solid 1px;
+        cursor: pointer;
+    }
+    .Card-footer__Title{
+        padding: var(--size-05);
+        height: 50px;
+        font-size: var(--size_1-3);
+    }
+    .Card-footer__Title:hover{
+        color: var(--color-botons);
+        cursor: pointer;
+    }
+    .Card-footer__Text{
+        text-align:justify;
+        text-decoration: none;
+        color: var(--color-black);
+    }
+    .Card-footer__Text:hover{
+        color: var(--color-botons);
+    }
+}
+@media (min-width: 1300px){
+    .Box, .Header__Box{
+        width: 95%;
+    }
+}
+@media (min-width: 1400px){
+    .Box, .Header__Box{
+        width: 90%;
+    }
+}
+@media (min-width: 1500px){
+    .Box, .Header__Box{
+        width: 85%;
+    }
+}
+@media (min-width: 1600px){
+    .Box, .Header__Box{
+        width: 80%;
+    }
+}
+@media (min-width: 1700px){
+    .Box, .Header__Box{
+        width: 75%;
+    }
+}
+
+@media (min-width: 1800px){
+    .Box, .Header__Box{
+        width: 70%;
+    }
+}
+
+
+
