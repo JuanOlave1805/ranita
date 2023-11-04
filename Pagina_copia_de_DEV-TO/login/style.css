@@ -64,7 +64,7 @@ body{
 .Header__Nav-icon{
     display: flex;
 }
-.Header__Icon{
+.Header__Icon img{
     height: 35px;    
     width: 40px;
     border-radius: var(--radius);
