@@ -1,11 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
-
-*{
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box
 }
 :root {
+    --color-1: rgb(0, 0, 0);
+    --color-2: #4c4747;
+    --color-3: rgb(255, 255, 255);
+    --color-4: #a3a3a3;
+    --color-5: #a29ad9;
+    --color-6: #a3a3a3ad;
+    --color-7: #ffffff;
+    --color-8: #e2e0ec;
+    --color-9: #a3a3a3;
+
     --font-open-sans: "Open Sans", sans-serif;
     --radius_1: 5px;
     --radius: 0.4rem;
@@ -24,17 +33,14 @@
     --size_1-3: 1.3rem;
     --size-1-5: 1.5rem;
     --size-2: 2rem;
-
 }
+
 body{
-    height: auto;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
     font-family: var(--font-open-sans);
     background: var(--color-beisge);
 }
+
+/* Encabezado */
 .Header{
     height: 50px;
     width: 100%;
@@ -64,17 +70,7 @@ body{
     border-radius: var(--radius);
     cursor: pointer;
 }
-/* .Nav-icon__Navbar{
-    background: white;
-    height: 40px;
-    width: 450px;
-    margin-left: 20px;
-    border-radius: 5px;
-    border: 1px solid wheat;
-}
-input:focus{
-    outline: 1px solid rebeccapurple;
-} */
+
 .Header__Search{
     width: 350px;
     background: var(--color-transparent);
@@ -94,8 +90,6 @@ input:focus{
     font-size: 15px;
     height: 37px;
     width: 100%;
-}
-::placeholder{
     padding-left: 5px;
     color: var(--color-white);
 }
@@ -133,9 +127,9 @@ input:focus{
     display: flex ;
     align-items: center;
     justify-content: center;
-    padding: var();
+    padding: var(--radius);
     border: 1px solid var(--primary);
-    border-radius: var(--size-05);
+    border-radius: var(--radius);
     text-decoration: none;
     font-weight: bold;
     height: 40px;
@@ -145,171 +139,157 @@ input:focus{
     color: var(--color-beisge);
 }
 
-.Box{
-    width: 65%;
-    height: 2000px;
-    display: grid;
-    grid-template-columns: 240px 2fr 1fr;
-    gap: 10px;
-}
-.Card{
-    /* background: red; */
-}
-.Card-aside{
-    background: var(--color-white);
-    border-radius: var(--radius);
-    padding: var(--size-0-75);
-}
-.Card-aside__Title{
-    font-size: var(--size-1);
-    margin-bottom: var(--size-0-75);
-    margin-top: var(--size-05);
-}
-.Card-aside__Text{
-    font-size: var(--size-09);
-    color: var(--color-gray);
-}
-.Card-aside__Box{
+/* Pagina register */
+
+.Contenedor{
     display: flex;
-    flex-direction: column-reverse;
+    justify-content: center;
     align-items: center;
-    margin-top: var(--size-1);
-    margin-bottom: var(--size-1);
+    height: 400px;
+    font-family: Arial, Helvetica, sans-serif;
 }
-.Card-aside__Link{
-    width: 100%;
-    text-align: center;
-    margin: var(--size-0-75);
-    margin-bottom: 0;
-}
-.Card-aside__Nav{
-    display: flex;
-    flex-direction: column;
-    margin-top: var(--size-1);
-}
-.Card-aside__Navigation{
-    padding: var(--size-05);
-    border-radius: var(--radius);
-    text-decoration: none;
-    color: var(--color-black);
-}
-.Card-aside__Navigation:hover{
-    background: var(--color-hover);
-}
-.mg-1{
-    margin-right: var(--size-05);
-}
-.Card-main{
-    background-color: var(--color-white);
-    border-radius: var(--radius);
-}
-.Card-main__box{
-    display: flex;
-    align-items:center;
-    margin-bottom: var(--size-1);
-}
-.mg-2{
-    padding: var(--size-0-75);
-    border-radius: var(--radius);
-}
-.mg-2:hover{
-    background-color: var(--bg-white);
-    color: var(--color-hover);
-}
-.Card-main__box--edit{
-    padding: var(--size-0-75);
-    padding-top: var(--size-02);
-}
-.Card-main__Title{
-    margin-bottom: var(--size-05);
-}
-.Card-main__Text{
-    margin-bottom: var(--size-1);
-}
-.Card-main__Link{
-    margin-right: var(--size-05);
-    padding: var(--size-05);
-    text-decoration:none;
-}
-span{
-    color: var(--color-black);
-}
-.Card-main__Link:hover{
-    background-color: var(--color-beisge);
-    border-radius: var(--radius);
-}
-.Card-footer{
-    margin: var(--size-1);
-    background-color: var(--color-white);
-    border-radius: var(--radius);
+.Contenedor__Caja{
+    width: 400px;
+    height: 580px;
+    background: var(--color-1);
+    border: var(--color-6) solid 2px;
 }
 
-.Card-footer__Box{
-    height: 100px;
-    padding: var(--size-05);
+.Contenedor__Titulo{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    color:var(--color-7);
+}
+.Contenedor__Formato{
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    border-top: var(--color-gray-suave)  solid 1px;
-    cursor: pointer;
+    width: 80%;
+    justify-content: center;
+    margin: auto;
+    margin-top: 30px;
+    font-size: 15px;
+    
 }
-.Card-footer__Title{
-    padding: var(--size-05);
+.Contenedor__input{
+    border: var(--color-4) solid 2px;
+    border-radius: 10px;
     height: 50px;
-    font-size: var(--size_1-3);
+    margin-top: px;
+    padding-left: 8px;
 }
-.Card-footer__Title:hover{
-    color: var(--color-botons);
-    cursor: pointer;
+.Contenedor__Botones_inferiores{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
 }
-.Card-footer__Text{
-    text-align:justify;
+.Contenedor__Boton_izquierda{
+    background: var(--color-1);
+    padding: 8px;
+    border: solid var(--color-8) 2px;
+    border-radius: 10px;
+}
+.Contenedor__Validar{
     text-decoration: none;
-    color: var(--color-black);
+    color: var(--color-8) ;
 }
-.Card-footer__Text:hover{
-    color: var(--color-botons);
+.Contenedor__Boton_derecho{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    color: var(--color-9);
 }
+
+/* Pagina Login */
+.Contenedor--login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 900px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.Contenedor__Caja--login{
+    width: 350px;
+    height: 380px;
+    background: var(--color-1);
+    border: var(--color-6) solid 2px;
+}
+.Contenedor__Titulo--login{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    color:var(--color-7);
+}
+.Contenedor__Botones_inferiores--login{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.Contenedor__Validar--login{
+    text-decoration: none;
+}
+.Contenedor__Boton_derecho--login{
+    color: var(--color-7);
+}
+.Contenedor__Rayas{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    text-decoration: none   
+}
+.Contenedor__Boton_final{
+    display: flex;
+    justify-content: center;
+    color: var(--color-7);
+    margin-top: 10px;
+}
+/* Contenido pagina olvido su contraseña */
+.Contenedor__Caja--recuperar{
+    height: 260px;
+}
+.Contenedor__Titulo--recuperar{
+    margin-top: 45px;
+}
+
+
+
+
 @media (max-width: 1800px){
-    .Box, .Header__Box{
+    .Header__Box{
         width: 70%;
     }
 }
 @media (max-width: 1700px){
-    .Box, .Header__Box{
+    .Header__Box{
         width: 75%;
     }
 }
 @media (max-width: 1600px){
-    .Box, .Header__Box{
+    .Header__Box{
         width: 80%;
     }
 }
 @media (max-width: 1500px){
-    .Box, .Header__Box{
+    .Header__Box{
         width: 85%;
     }
 }
 @media (max-width: 1400px){
-    .Box, .Header__Box{
+    .Header__Box{
         width: 90%;
     }
 }
 @media (max-width: 1300px){
-    .Box, .Header__Box{
+    .Header__Box{
         width: 95%;
     }
 }
 @media (max-width: 1030px) {
     .Header__Box{
         width: 98%;
-    }
-    .Box{
-        grid-template-columns:1fr 2fr;
-        width: 98%;
-    }
-    footer{
-        display: none;
     }
   }
 
@@ -338,12 +318,5 @@ span{
         background: transparent;
         border: 0;
         margin-right: 10px;
-    }
-    .Box{
-        display: grid;
-        grid-template-columns:1fr;
-    }
-    .Card-main{
-        margin: var(--size-05);
     }
 }
